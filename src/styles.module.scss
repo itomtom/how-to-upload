@@ -1,0 +1,96 @@
+$rhythm: 8px;
+
+.bulletList {
+  list-style-type: disc;
+  margin-left: $rhythm * 3;
+  margin-bottom: $rhythm * 2;
+
+  b {
+    font-weight: bold;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: $rhythm * 2;
+  }
+
+  ul {
+    margin-top: $rhythm;
+    list-style-type: disc;
+    margin-left: $rhythm * 3;
+
+    li:not(:last-child) {
+      margin-bottom: $rhythm / 2;
+    }
+  }
+}
+
+.csvExample {
+  position: relative;
+
+  .csvExampleTable {
+    width: 100%;
+    border-collapse: separate;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+
+    thead {
+      background: #e8ebeb;
+      text-align: left;
+
+      th {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        &:not(:last-child) {
+          border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:first-of-type {
+          td {
+            box-shadow: inset 0px 6px 4px -4px rgba(0, 0, 0, 0.08);
+          }
+        }
+
+        &:not(:last-of-type) {
+          td {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+          }
+        }
+      }
+
+      td {
+        &:first-child {
+          text-align: right;
+          background: rgba(0, 0, 0, 0.08);
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: $rhythm;
+    }
+  }
+
+  .csvExampleFadeOut {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #f9fafa, transparent);
+  }
+
+  .infoBanner {
+    display: flex;
+    align-items: center;
+    margin-top: $rhythm * 2;
+  }
+}
